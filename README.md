@@ -9,7 +9,13 @@ Required tools:
     - Firebase account with a firebase project
 
 Required config files:
-
+- `android/app/google-services.json`
+- `ios/firebase_app_id_file.json`
+- `ios/Runner/GoogleServices-Info.plist`
+- `lib/firebase_options.dart`
+- `firebase.json`
+  ** These files should be created from your own firebase configuration even before trying to run the project. That's why they are not versioned on this git repo and ignored on `.gitignore` file.
+  The step-by-step configuration process is described below.
 
 ## Getting Started
 

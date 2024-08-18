@@ -57,4 +57,15 @@ class MyApp extends StatelessWidget {
       _ => const ScreenAuth()
     };
   }
+
+  Widget getHomeWidgetWithErrorPrinting(BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+    if(snapshot.hasError){
+      print(snapshot.error);
+    }
+    return switch (mainScreen) {
+      'auth' => const ScreenAuth(),
+      'gym_exercise' => const ScreenGymExercise(),
+      _ => const ScreenAuth()
+    };
+  }
 }

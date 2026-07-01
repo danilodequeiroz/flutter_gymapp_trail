@@ -111,7 +111,13 @@ i Found 1 Firebase projects.
 ``` 
 
 That step will create the following files:
-which you can keep them ignored on `.gitignore` file for security reasons.
+
+ - `flutter_gymapp_trail/firebase.json`
+ - `flutter_gymapp_trail/lib/firebase_options.dart`
+ - `flutter_gymapp_trail/android/app/google-services.json`
+
+Which you can keep them on `.gitignore` file for security reasons.
+
 Now you can open the project then build and run.
 
 

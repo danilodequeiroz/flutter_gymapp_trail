@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gymapp/core/theme/colors.dart';
-import 'package:flutter_gymapp/localization/localization.dart';
+import 'package:flutter_gymapp/core/localization/localization.dart';
 import 'package:flutter_gymapp/feature/authentication/data/services/authentication_service.dart';
 import 'package:flutter_gymapp/feature/authentication/presentation/view_models/authentication_view_model.dart';
 import 'package:flutter_gymapp/feature/authentication/presentation/decoration/authentication_text_field_decoration.dart';

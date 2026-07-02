@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gymapp/core/theme/colors.dart';
-import 'package:flutter_gymapp/localization/localization.dart';
+import 'package:flutter_gymapp/core/localization/localization.dart';
 import 'package:flutter_gymapp/feature/training/creation/data/mock/factory.dart';
 import 'package:flutter_gymapp/feature/training/creation/data/model_feeling.dart';
 

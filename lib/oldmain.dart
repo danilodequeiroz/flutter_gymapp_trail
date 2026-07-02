@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:logging_to_logcat/logging_to_logcat.dart';
 import 'package:logging/logging.dart';
 import 'core/constants.dart';
-import 'package:flutter_gymapp/l10n/app_localizations.dart';
+import 'package:flutter_gymapp/core/localization/l10n/app_localizations.dart';
 
 Future initLogging() async {
   Logger.root.activateLogcat();

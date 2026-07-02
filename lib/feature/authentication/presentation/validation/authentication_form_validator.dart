@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gymapp/localization/localization.dart';
+import 'package:flutter_gymapp/core/localization/localization.dart';
 
 class AuthenticationFormValidator {
   BuildContext context;

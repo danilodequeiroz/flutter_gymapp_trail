@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_gymapp/localization/localization.dart';
+import 'package:flutter_gymapp/core/localization/localization.dart';
 import 'package:flutter_gymapp/feature/training/creation/data/model_exercise.dart';
 import 'package:flutter_gymapp/feature/training/creation/data/model_feeling.dart';
 

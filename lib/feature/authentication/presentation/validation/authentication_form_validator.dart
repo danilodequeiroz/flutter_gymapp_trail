@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gymapp/localization/localization.dart';
 
-class AuthFormValidator {
+class AuthenticationFormValidator {
   BuildContext context;
 
-  AuthFormValidator({required this.context});
+  AuthenticationFormValidator({required this.context});
 
   emailValidator(String? value) {
     if (value == null || value.isEmpty) {

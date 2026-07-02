@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gymapp/_common/colors.dart';
+import 'package:flutter_gymapp/core/theme/colors.dart';
 
 const double two = 2;
 const double four = 4;
@@ -7,7 +7,7 @@ const double eight = 16;
 const double sixteen = 16;
 const double sixtyFour = 64;
 
-class AuthTextFieldDecoration {
+class AuthenticationTextFieldDecoration {
 
   static bool hideText = true;
 

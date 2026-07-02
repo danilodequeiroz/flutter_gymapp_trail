@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gymapp/localization/localization.dart';
-import 'package:flutter_gymapp/models/model_exercise.dart';
-import 'package:flutter_gymapp/models/model_feeling.dart';
+import 'package:flutter_gymapp/feature/training/creation/data/model_exercise.dart';
+import 'package:flutter_gymapp/feature/training/creation/data/model_feeling.dart';
 
 class MockFactory {
   static Exercise getExercise(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gymapp/_common/colors.dart';
+import 'package:flutter_gymapp/core/theme/colors.dart';
 import 'package:flutter_gymapp/localization/localization.dart';
-import 'package:flutter_gymapp/models/mock/factory.dart';
-import 'package:flutter_gymapp/models/model_feeling.dart';
+import 'package:flutter_gymapp/feature/training/creation/data/mock/factory.dart';
+import 'package:flutter_gymapp/feature/training/creation/data/model_feeling.dart';
 
 class ScreenGymExercise extends StatelessWidget {
   const ScreenGymExercise({super.key});

@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gymapp/_common/colors.dart';
-import 'package:flutter_gymapp/decoration/auth_text_field_decoration.dart';
+import 'package:flutter_gymapp/core/theme/colors.dart';
 import 'package:flutter_gymapp/localization/localization.dart';
-import 'package:flutter_gymapp/services/authentication_service.dart';
-import 'package:flutter_gymapp/ui/authentication_view_model.dart';
-import 'package:flutter_gymapp/ui/ui_screen_gym_exercise.dart';
-import 'package:flutter_gymapp/validation/auth_form_validator.dart';
-import 'package:flutter_gymapp/_common/password_generator.dart';
+import 'package:flutter_gymapp/feature/authentication/data/services/authentication_service.dart';
+import 'package:flutter_gymapp/feature/authentication/presentation/view_models/authentication_view_model.dart';
+import 'package:flutter_gymapp/feature/authentication/presentation/decoration/authentication_text_field_decoration.dart';
+import 'package:flutter_gymapp/feature/training/creation/presentation/ui_screen_gym_exercise.dart';
+import 'package:flutter_gymapp/feature/authentication/presentation/validation/authentication_form_validator.dart';
+import 'package:flutter_gymapp/core/utils/password_generator.dart';
 
 class ScreenAuth extends StatefulWidget {
   const ScreenAuth({super.key});
@@ -80,28 +80,28 @@ class _ScreenAuthState extends State<ScreenAuth> {
                         TextFormField(
                           controller: _emailController,
                           decoration:
-                              AuthTextFieldDecoration.getCustomInputDecoration(
+                              AuthenticationTextFieldDecoration.getCustomInputDecoration(
                                   appLocalization(context).formEmailKeyLabel),
                           validator: (value) =>
-                              AuthFormValidator(context: context)
+                              AuthenticationFormValidator(context: context)
                                   .emailValidator(value),
                         ),
                         const SizedBox(height: 8),
                         TextFormField(
                           controller: _passwordController,
-                          obscureText: AuthTextFieldDecoration.hideText,
-                          decoration: AuthTextFieldDecoration
+                          obscureText: AuthenticationTextFieldDecoration.hideText,
+                          decoration: AuthenticationTextFieldDecoration
                               .getCustomInputDecorationPassword(
                                   label: appLocalization(context)
                                       .formConfirmPasswordKeyLabel,
                                   onHidePasswordPressed: () {
                                     setState(() {
-                                      AuthTextFieldDecoration.hideText =
-                                          !AuthTextFieldDecoration.hideText;
+                                      AuthenticationTextFieldDecoration.hideText =
+                                          !AuthenticationTextFieldDecoration.hideText;
                                     });
                                   }),
                           validator: (value) =>
-                              AuthFormValidator(context: context)
+                              AuthenticationFormValidator(context: context)
                                   .passwordValidator(value),
                         ),
                         Visibility(
@@ -111,31 +111,31 @@ class _ScreenAuthState extends State<ScreenAuth> {
                                 const SizedBox(height: 8),
                                 TextFormField(
                                   controller: _password2Controller,
-                                  obscureText: AuthTextFieldDecoration.hideText,
-                                  decoration: AuthTextFieldDecoration
+                                  obscureText: AuthenticationTextFieldDecoration.hideText,
+                                  decoration: AuthenticationTextFieldDecoration
                                       .getCustomInputDecorationPassword(
                                           label: appLocalization(context)
                                               .formConfirmPasswordKeyLabel,
                                           onHidePasswordPressed: () {
                                             setState(() {
-                                              AuthTextFieldDecoration.hideText =
-                                                  !AuthTextFieldDecoration
+                                              AuthenticationTextFieldDecoration.hideText =
+                                                  !AuthenticationTextFieldDecoration
                                                       .hideText;
                                             });
                                           }),
                                   validator: (value) =>
-                                      AuthFormValidator(context: context)
+                                      AuthenticationFormValidator(context: context)
                                           .passwordValidator(value),
                                 ),
                                 const SizedBox(height: 8),
                                 TextFormField(
                                   controller: _nameController,
-                                  decoration: AuthTextFieldDecoration
+                                  decoration: AuthenticationTextFieldDecoration
                                       .getCustomInputDecoration(
                                           appLocalization(context)
                                               .formNameKeyLabel),
                                   validator: (value) =>
-                                      AuthFormValidator(context: context)
+                                      AuthenticationFormValidator(context: context)
                                           .userNameValidator(value),
                                 )
                               ],

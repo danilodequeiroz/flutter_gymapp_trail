@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gymapp/l10n/app_localizations.dart';
-import 'package:flutter_gymapp/ui/ui_screen_authentication.dart';
-import 'package:flutter_gymapp/ui/ui_screen_gym_exercise.dart';
+import 'package:flutter_gymapp/feature/authentication/presentation/ui_screen_authentication.dart';
+import 'package:flutter_gymapp/feature/training/creation/presentation/ui_screen_gym_exercise.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:logging_to_logcat/logging_to_logcat.dart';
 import 'package:logging/logging.dart';

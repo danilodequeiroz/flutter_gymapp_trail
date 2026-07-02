@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_gymapp/_common/extensions/firebase_auth_code_check.dart';
+import 'package:flutter_gymapp/core/extensions/firebase_auth_code_check.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebase = FirebaseAuth.instance;

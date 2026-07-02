@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gymapp/_common/colors.dart';
 import 'package:flutter_gymapp/decoration/auth_text_field_decoration.dart';
 import 'package:flutter_gymapp/localization/localization.dart';
-import 'package:flutter_gymapp/services/auth_service.dart';
+import 'package:flutter_gymapp/services/authentication_service.dart';
+import 'package:flutter_gymapp/ui/authentication_view_model.dart';
 import 'package:flutter_gymapp/ui/ui_screen_gym_exercise.dart';
 import 'package:flutter_gymapp/validation/auth_form_validator.dart';
 import 'package:flutter_gymapp/_common/password_generator.dart';
@@ -23,7 +24,9 @@ class _ScreenAuthState extends State<ScreenAuth> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _password2Controller = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
-  final AuthService _authService = AuthService();
+
+  final AuthenticationService _authService = AuthenticationService();
+  final AuthViewModel _viewModel = AuthViewModel();
 
   @override
   void initState() {
@@ -149,8 +152,8 @@ class _ScreenAuthState extends State<ScreenAuth> {
                                 : appLocalization(context).formSignupKeyLabel)),
                         ElevatedButton(
                             onPressed: () {
-                              // navigateAndPopupFromBottomToTop();
-                              // navigateAndSlideFromRightEdgeOverPresentScreen();
+                              navigateAndPopupFromBottomToTop();
+                              navigateAndSlideFromRightEdgeOverPresentScreen();
                             },
                             child: const Text("bypass loggin requirement")),
                         const Divider(),
@@ -169,6 +172,12 @@ class _ScreenAuthState extends State<ScreenAuth> {
             ),
           )
         ]));
+  }
+
+  @override
+  void dispose() {
+    _viewModel.dispose();
+    super.dispose();
   }
 
   void chooseBetweenLogginAndSignUpAndSetState() {
@@ -199,7 +208,7 @@ class _ScreenAuthState extends State<ScreenAuth> {
   }
 
   void signupClicked() {
-    _authService.postNewUserHandledException(
+    _authService.postNewUser(
         email: _emailController.text,
         password: _passwordController.text,
         name: _nameController.text);

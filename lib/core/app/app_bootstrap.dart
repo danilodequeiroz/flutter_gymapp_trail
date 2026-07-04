@@ -11,12 +11,16 @@ class AppBootstrap {
 
     await Future.wait([
       _initLogging(),
-      Firebase.initializeApp(
-          options: DefaultFirebaseOptions.currentPlatform
-      ),
+      _defaultFirebaseInit(),
       _initLocalStorage(),
       _initDependencyInjection(),
     ]);
+  }
+
+  static Future<void> _defaultFirebaseInit() async {
+    Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform
+    );
   }
 
   static Future<void> _initDependencyInjection() async {
